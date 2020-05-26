@@ -7990,7 +7990,7 @@ hr {
   overflow-y: visible;
   overflow-x: hidden;
   width: 280px;
-  height: 900px;
+  height: 100%;
   top: 66px;
   position: sticky;
   background-color: #434343 !important;
@@ -8005,6 +8005,10 @@ hr {
     padding: 0; }
   .dashboard .dashboard-list {
     padding: 30px; }
+    @media screen and (max-width: 767px) {
+      .dashboard .dashboard-list {
+        margin-bottom: 25px;
+        padding: 30px 45px; } }
     .dashboard .dashboard-list hr {
       border-color: #a62a2a !important; }
     .dashboard .dashboard-list .dashboard-card {

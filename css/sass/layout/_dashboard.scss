@@ -3,7 +3,7 @@ $dashboard-width:280px;
     overflow-y: visible;
     overflow-x: hidden;
     width: 280px;
-    height: 900px;
+    height: 100%;
     top: 66px;
     position: sticky;
     background-color: $dark-color;
@@ -19,6 +19,10 @@ $dashboard-width:280px;
     }
     .dashboard-list {
         padding: 30px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 25px;
+            padding: 30px 45px;
+        }
         hr {
             border-color: $danger-color;
         }
