@@ -1,3 +1,4 @@
+@import '../sass/swiper.min.css';
 @import '../sass/main.scss';
 @import '../sass/style.scss';
 @import '../sass/pages/home';
@@ -23,10 +24,17 @@ body {
         .dashboard-list .dashboard-card .dashboard-card-btn {
             .dashboard-card-list {
                 border-left: 0 !important;
-                border-right: 1px solid #a62a2a !important;
+                border-right: 1px solid #707173 !important;
             }
             .list-btn {
                 text-align: right !important;
+            }
+        }
+    }
+    .why-us {
+        .btn {
+            .svg-inline--fa {
+                transform: rotate(0deg) scaleX(-1);
             }
         }
     }

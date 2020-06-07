@@ -10,6 +10,7 @@ $dashboard-width:280px;
     transition: $transation;
     z-index: 100;
     border: 0 !important;
+    min-width: 240px !important;
     @media screen and (max-width: 767px) {
         position: fixed;
     }
@@ -36,15 +37,17 @@ $dashboard-width:280px;
                 font-size: 14px;
                 margin: 0.75rem 0;
                 font-weight: bold;
-                color: $light-color;
+                color: $white-color;
                 white-space: nowrap;
                 position: relative;
-                border-bottom: 1px solid white;
+                //border-bottom: 1px solid white;
+                opacity: $opacity;
             }
             .dashboard-card-btn {
                 margin-top: 15px;
                 .list-btn {
-                    color: $light-color;
+                    color: $white-color;
+                    background-color: $muted-color;
                     display: block;
                     border: none;
                     text-align: left;
@@ -53,6 +56,7 @@ $dashboard-width:280px;
                     overflow: hidden;
                     cursor: pointer;
                     width: 100%;
+                    opacity: $opacity;
                     .dashboard-category {
                         padding-left: 8px;
                         margin-top: 10px;
@@ -72,10 +76,10 @@ $dashboard-width:280px;
                 }
                 .dashboard-card-list {
                     padding: 0 10px;
-                    border-left: 1px solid $danger-color;
+                    border-left: 1px solid #707173;
                     li {
                         .sublist-btn {
-                            margin: 10px 10px 0 10px;
+                            margin: 13px 10px 0 10px;
                             width: 93%;
                         }
                     }

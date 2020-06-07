@@ -8,6 +8,8 @@ body {
 .myPage {
     display: flex;
     justify-content: center;
+    position: relative;
+    //width: 100%;
     //align-items: center;
     @media screen and (min-width: 768px) {
         margin-left: auto;
@@ -38,6 +40,10 @@ body {
         margin-left: 2rem;
         justify-content: center;
     }
+}
+
+.opacity {
+    opacity: $opacity;
 }
 
 .shadow-lg {

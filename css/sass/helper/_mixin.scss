@@ -1,35 +1,5 @@
 @import 'variables';
 
-/*
-** for hide or remove section from our html page
-*/
-@mixin isHidden {
-	@if $sidenav-hidden == true  {
-		display: none;
-        height: 0px !important;
-        width: 0px !important;
-	}
-}
-
-
-@mixin  isFixed {
-    @if  $header-fixed == true {
-        
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: $left-side-width;
-        right: 0;
-        overflow-x: hidden;
-        @media screen and (max-width: 767px) {
-            left:0;
-            position: relative;
-        }
-    }
-}
-
-
-
 /* 
 ** Overlay : all overlay in our site must have these properties 
 */
@@ -72,4 +42,3 @@
         @content;
     }
 }
-

@@ -19,21 +19,20 @@
                 margin: 5px;
             }
             &:hover {
+                background: linear-gradient(to left, #6a2b31, #dc3545);
+                color: $light-color;
+                opacity: $opacity;
                 @media screen and (min-width: 768px) {
-                    background: linear-gradient(to left, #6a2b31, #dc3545);
-                    color: $light-color;
                     transition: all 0.5s !important;
                 }
                 @media screen and (max-width: 768px) {
-                    //background-color: $danger-color;
-                    background: linear-gradient(to left, #6a2b31, #dc3545);
-                    color: $light-color;
                     transition: all 0.5s !important;
                 }
             }
         }
         .form-control {
             border: 1px solid #a62a2a;
+            opacity: $opacity-bold;
             &:focus {
                 box-shadow: 0px 1px 5px #a62a2a, 0px -1px 5px #a62a2a;
             }

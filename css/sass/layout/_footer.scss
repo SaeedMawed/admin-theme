@@ -16,7 +16,8 @@
         }
         h2,
         h3 {
-            color: #fff;
+            color: $white-color;
+            opacity: $opacity;
         }
         h2 {
             font-size: 18px;
@@ -24,14 +25,12 @@
         .segment-one {
             h3 {
                 font-family: Courgette;
-                color: #fff;
                 letter-spacing: 3px;
                 margin: 10px 0;
             }
         }
         .segment-tow {
             h2 {
-                color: #fff;
                 font-family: poppins;
                 text-transform: uppercase;
             }
@@ -56,7 +55,6 @@
         }
         .segment-three {
             h2 {
-                color: #fff;
                 font-family: poppins;
                 text-transform: uppercase;
             }
@@ -66,21 +64,26 @@
                 padding-right: 10px;
             }
             a {
-                background-color: #494848;
                 width: 40px;
                 height: 40px;
                 display: inline-block;
                 border-radius: 50%;
-                i {
-                    font-size: 20px;
-                    color: #fff;
-                    padding: 10px 12px;
+                .svg-inline--fa {
+                    color: $white-color;
+                    opacity: $opacity;
+                    display: inline-block;
+                    font-size: inherit;
+                    height: 2em;
+                    overflow: visible;
+                    vertical-align: -0.125em;
+                    padding: 0px;
+                    margin: -10px 0px 0 5px;
+                    font-size: 30px;
                 }
             }
         }
         .segment-four {
             h2 {
-                color: #fff;
                 font-family: Poppins;
                 text-transform: uppercase;
             }
@@ -95,8 +98,12 @@
                 padding: 3px 7px;
                 //margin-left: -5px;
                 color: #fff;
+                opacity: $opacity;
                 text-transform: uppercase;
                 text-align: center;
+            }
+            form input[type=email] {
+                opacity: $opacity-bold;
             }
         }
     }
@@ -106,7 +113,8 @@
         line-height: 75px;
         margin: 0;
         // margin-left: $left-side-width;
-        color: white;
+        color: $white-color;
+        opacity: $opacity;
     }
     @media only screen and (min-width:768px) and (max-width:991px) {
         .md-mb-30 {
