@@ -150,7 +150,9 @@
         padding-top: 50px;
         padding-bottom: 50px;
         overflow: hidden;
-        left: 25px;
+        .swiper-wrapper {
+            left: 25px;
+        }
         .swiper-slide {
             background-position: center;
             background-size: cover;
