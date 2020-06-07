@@ -20,6 +20,7 @@
             margin: 0px 5px;
             @media screen and (max-width: 768px) {
                 margin: 5px;
+                padding: 0 10px !important;
             }
             &:hover {
                 background: linear-gradient(to left, #6a2b31, #dc3545);
