@@ -8269,11 +8269,28 @@ table.dataTable thead .sorting_desc_disabled:before {
     color: white;
     border: 1px solid #1dc4e9; }
 
-.product-management {
-  transition: all 2s; }
-  .product-management .product-btns {
-    padding: 1.5rem; }
-    .product-management .product-btns .my-btn:nth-child(2) {
-      margin-left: 1rem; }
+.category-container .more-info {
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+  margin-left: auto;
+  margin-top: auto;
+  border: 0; }
+.category-container .myForm-container label {
+  color: black; }
+.category-container .myForm-container form {
+  border-right: 3px solid #dee2e6 !important; }
+  @media screen and (max-width: 991px) {
+    .category-container .myForm-container form {
+      border-width: thin;
+      border-right: 0px !important;
+      border-bottom: 3px solid #dee2e6 !important; } }
+.category-container tr:hover {
+  color: #fff;
+  background: #333f54 !important;
+  transition: all .5s !important;
+  opacity: .7; }
+.category-container .more-info-btn {
+  margin: 0 5px !important; }
 
-/*# sourceMappingURL=product-management.css.map */
+/*# sourceMappingURL=category-management.css.map */

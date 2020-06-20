@@ -8269,11 +8269,4 @@ table.dataTable thead .sorting_desc_disabled:before {
     color: white;
     border: 1px solid #1dc4e9; }
 
-.product-management {
-  transition: all 2s; }
-  .product-management .product-btns {
-    padding: 1.5rem; }
-    .product-management .product-btns .my-btn:nth-child(2) {
-      margin-left: 1rem; }
-
-/*# sourceMappingURL=product-management.css.map */
+/*# sourceMappingURL=preadded-product-table.css.map */

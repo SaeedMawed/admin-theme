@@ -8,7 +8,7 @@
 
 
     <!-- my Styles -->
-    <link rel="stylesheet" href="css/COMPILED-PAGES/addstock-form.css">
+    <link rel="stylesheet" href="css/COMPILED-PAGES/category-management.css">
 
     <title>Admin Theme</title>
 </head>
@@ -163,10 +163,10 @@
     <section>
         <div class="header" id="header">
             <nav class="navbar navbar-expand-sm navbar-light bg-gray justify-content-between">
-                <a class="navbar-brand" href="#"><i class="fas fa-home mr-2"></i>/ Dashboard / Total Report</a>
+                <a class="navbar-brand" href="#"><i class="fas fa-home mr-2"></i>/ Dashboard / Category Management</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+              <span class="navbar-toggler-icon"></span>
+            </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
@@ -209,89 +209,93 @@
             </nav>
         </div>
     </section>
-    <section class="main-layout addstock-form">
-        <div class="container-fluid">
+    <section class="main-layout">
+        <div class="container-fluid category-container">
             <!-- Start Main Layout -->
-            <div class="addDetails">
-                <div class="product-info container">
-                    <h4 class="text-danger d-block">Product Details</h4>
-                    <hr>
-                    <div class="row p-2">
-                        <div class="col-lg-8 col-md-7 col-sm-12 m-0 p-0">
-                            <h4 class="text-dark title-desc">
-                                Product Name : <span class="text-primary info-desc">Dress A</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Gender : <span class="text-primary info-desc">women</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Category : <span class="text-primary info-desc">Dress for women</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Brand : <span class="text-primary info-desc">D&amp;G</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Made in : <span class="text-primary info-desc">Turkey</span>
-                            </h4>
+            <!-- 
+            <h1>Category Panel</h1>
+            <button type="button"
+                class="btn btn-success btn-lg btn-block mb-3 mt-5"
+                style="background-color: #28a745;"
+                onclick="window.location.href='/api/category/addCategory'">Add
+                New Category</button>
+             -->
+            <div class="row p-0 m-0">
+                <div class="myForm-container col-lg-4 m-0">
+                    <form action="/api/category/addCategory" method="POST" style="border: 1px solid #ccc" enctype="multipart/form-data">
+                        <div class="container">
+                            <h1>New Category</h1>
+                            <h4 class="text-danger mb-3">Please fill in this form to complete Category information.</h4>
+                            <div class="form-group">
+                                <label for="name">Category Name *</label> <input type="text" class="form-control" id="name" required name="name" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Description and more info </label>
+                                <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+                            </div>
+                            <div class="clearfix">
+                                <button type="button" class="cancelbtn" onclick="window.location.reload()">Cancel</button>
+                                <button type="submit" class="submitbtn">Save</button>
+                            </div>
                         </div>
-                        <div class="image col-lg-4 col-md-5 col-sm-12 m-0 p-0">
-                            <img src="/images/product-1.jpg" alt="Product 1">
-                        </div>
-                    </div>
+                    </form>
                 </div>
-
-                <div class="container">
-                    <h4 class="text-danger mt-4">Please fill in this form to complete Product Details information.</h4>
-
-                    <div class="main-table ">
-                        <table class="table table-bordered table-hover  my-table " id="mydatatable">
-                            <thead class="table-header">
-                                <tr>
-                                    <th scope="col">Store</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Color</th>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Quantity</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-body">
-
-                                <tr class="input-table">
-                                    <form action="/api/product/addProductDetails/4" method="Post" style="border: 1px solid #ccc">
-                                        <th scope="row">
-                                            <div class="category-select">
-                                                <div class="form-group ">
-                                                    <select id="inputState" class="form-control" required name="store.id">
-																	<option value="1">Damascus Store</option>
-																</select>
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td><input type="text" placeholder="Enter Price" required id="productDetails.price" name="productDetails.price" value="0.0"></td>
-                                        <td><input type="text" placeholder="Enter Color" required id="productDetails.color" name="productDetails.color" value=""></td>
-                                        <td><input type="text" placeholder="Enter Size" required id="productDetails.size" name="productDetails.size" value=""></td>
-                                        <td><input type="text" placeholder="Enter Count" required id="count" name="count" value="0"></td>
-                                        <td><input class="btn btn-success my-btn" type="submit" value="Save"></td>
+                <div class="main-table col-lg-8 pl-0 pr-0 m-0">
+                    <table class="table table-bordered table-hover  my-table" id="mydatatable">
+                        <thead class="table-header">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <!-- 
+                            <tr th:if="${users.empty}">
+                                <td colspan="2"> No Users Available </td>
+                            </tr>
+                             -->
+                            <tr>
+                                <th scope="row">1</th>
+                                <td><span>Dress for women</span></td>
+                                <td><span>Women</span></td>
+                                <td class="more-info d-flex border-none">
+                                    <form action="/api/category/update/1" method="get">
+                                        <button type="submit" class="btn btn-success more-info-btn">
+                                                <i class=" far fa-edit" aria-hidden="true"></i>
+                                            </button>
                                     </form>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">Damascus Store</th>
-                                    <td>35 $</td>
-                                    <td>Black</td>
-                                    <td>medium</td>
-                                    <td>50</td>
-                                    <td><input type="submit" value="Saved" disabled></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                    <form action="/api/category/delete/1" method="get">
+                                        <button type="submit" class="btn btn-danger more-info-btn">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td><span>T-Shirt</span></td>
+                                <td><span>T-shirt</span></td>
+                                <td class="more-info d-flex border-none">
+                                    <form action="/api/category/update/2" method="get">
+                                        <button type="submit" class="btn btn-success more-info-btn">
+                                                <i class=" far fa-edit" aria-hidden="true"></i>
+                                            </button>
+                                    </form>
+                                    <form action="/api/category/delete/2" method="get">
+                                        <button type="submit" class="btn btn-danger more-info-btn">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- End Main Layout -->
         </div>
-
     </section>
 
 
@@ -305,8 +309,13 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
     <script src="js/fontawesome.all.js "></script>
-    <script src="js/main.js " type="text/javascript "></script>
+    <script src="js/main.js "></script>
+    <script src="js/search.js"></script>
+
+
 </body>
 
 </html>

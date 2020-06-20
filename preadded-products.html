@@ -8,7 +8,7 @@
 
 
     <!-- my Styles -->
-    <link rel="stylesheet" href="css/COMPILED-PAGES/addstock-form.css">
+    <link rel="stylesheet" href="css/COMPILED-PAGES/preadded-product-table.css">
 
     <title>Admin Theme</title>
 </head>
@@ -209,86 +209,93 @@
             </nav>
         </div>
     </section>
-    <section class="main-layout addstock-form">
+    <section class="main-layout">
+
         <div class="container-fluid">
             <!-- Start Main Layout -->
-            <div class="addDetails">
-                <div class="product-info container">
-                    <h4 class="text-danger d-block">Product Details</h4>
-                    <hr>
-                    <div class="row p-2">
-                        <div class="col-lg-8 col-md-7 col-sm-12 m-0 p-0">
-                            <h4 class="text-dark title-desc">
-                                Product Name : <span class="text-primary info-desc">Dress A</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Gender : <span class="text-primary info-desc">women</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Category : <span class="text-primary info-desc">Dress for women</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Brand : <span class="text-primary info-desc">D&amp;G</span>
-                            </h4>
-                            <h4 class="text-dark title-desc">
-                                Made in : <span class="text-primary info-desc">Turkey</span>
-                            </h4>
-                        </div>
-                        <div class="image col-lg-4 col-md-5 col-sm-12 m-0 p-0">
-                            <img src="/images/product-1.jpg" alt="Product 1">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <h4 class="text-danger mt-4">Please fill in this form to complete Product Details information.</h4>
-
-                    <div class="main-table ">
-                        <table class="table table-bordered table-hover  my-table " id="mydatatable">
-                            <thead class="table-header">
-                                <tr>
-                                    <th scope="col">Store</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Color</th>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Quantity</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-body">
-
-                                <tr class="input-table">
-                                    <form action="/api/product/addProductDetails/4" method="Post" style="border: 1px solid #ccc">
-                                        <th scope="row">
-                                            <div class="category-select">
-                                                <div class="form-group ">
-                                                    <select id="inputState" class="form-control" required name="store.id">
-																	<option value="1">Damascus Store</option>
-																</select>
-                                                </div>
-                                            </div>
-                                        </th>
-                                        <td><input type="text" placeholder="Enter Price" required id="productDetails.price" name="productDetails.price" value="0.0"></td>
-                                        <td><input type="text" placeholder="Enter Color" required id="productDetails.color" name="productDetails.color" value=""></td>
-                                        <td><input type="text" placeholder="Enter Size" required id="productDetails.size" name="productDetails.size" value=""></td>
-                                        <td><input type="text" placeholder="Enter Count" required id="count" name="count" value="0"></td>
-                                        <td><input class="btn btn-success my-btn" type="submit" value="Save"></td>
-                                    </form>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">Damascus Store</th>
-                                    <td>35 $</td>
-                                    <td>Black</td>
-                                    <td>medium</td>
-                                    <td>50</td>
-                                    <td><input type="submit" value="Saved" disabled></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="main-table">
+                <h4 class="table-main-title">Pre-added products</h4>
+                <table class="table table-bordered table-hover  my-table" id="mydatatable">
+                    <thead class="table-header">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Made in</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Choose</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <!-- 
+                        <tr th:if="${products.empty}">
+                            <td colspan="2"> No Product Available </td>
+                        </tr>
+                         -->
+                        <tr>
+                            <td><span>sport t-shirt</span></td>
+                            <td><span>T-Shirt</span></td>
+                            <td><span>man</span></td>
+                            <td><span>Germany</span></td>
+                            <td><span>adidas</span></td>
+                            <td class="more-info">
+                                <form action="/api/product/addProductDetails/5">
+                                    <input class="btn my-btn" type="submit" id="more-info" value="Choose" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>Dress A</span></td>
+                            <td><span>Dress for women</span></td>
+                            <td><span>women</span></td>
+                            <td><span>Turkey</span></td>
+                            <td><span>D&amp;G</span></td>
+                            <td class="more-info">
+                                <form action="/api/product/addProductDetails/4">
+                                    <input class="btn my-btn" type="submit" id="more-info" value="Choose" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>قميص كتان</span></td>
+                            <td><span>T-Shirt</span></td>
+                            <td><span>man</span></td>
+                            <td><span>سوريا</span></td>
+                            <td><span>غير معروف</span></td>
+                            <td class="more-info">
+                                <form action="/api/product/addProductDetails/3">
+                                    <input class="btn my-btn" type="submit" id="more-info" value="Choose" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>قميص</span></td>
+                            <td><span>Dress for women</span></td>
+                            <td><span>man</span></td>
+                            <td><span>italy</span></td>
+                            <td><span>LC</span></td>
+                            <td class="more-info">
+                                <form action="/api/product/addProductDetails/2">
+                                    <input class="btn my-btn" type="submit" id="more-info" value="Choose" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>Dress Women</span></td>
+                            <td><span>Dress for women</span></td>
+                            <td><span>women</span></td>
+                            <td><span>Turkey</span></td>
+                            <td><span>D&amp;G</span></td>
+                            <td class="more-info">
+                                <form action="/api/product/addProductDetails/1">
+                                    <input class="btn my-btn" type="submit" id="more-info" value="Choose" />
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
             <!-- End Main Layout -->
         </div>
 
@@ -306,7 +313,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
     <script src="js/fontawesome.all.js "></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
     <script src="js/main.js " type="text/javascript "></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>
