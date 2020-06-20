@@ -1,98 +1,30 @@
 html,
 body {
-    background-color: $dark-color;
     margin: 0px !important;
     padding: 0px !important;
-}
-
-.myPage {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    //width: 100%;
-    //align-items: center;
-    @media screen and (min-width: 768px) {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 68px;
-    }
-    @media screen and (max-width:768px) {
-        width: 94%;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    @media (width:768px) {
-        margin-top: 0px;
-    }
-}
-
-.main-page {
     transition: $transation;
-    width: 100%;
-    min-height: 1500px;
-    background-color: $dark-color;
+    font-family: Open Sans, sans-serif !important;
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+    background: #f4f7fa;
     position: relative;
-    padding: 72px 5%;
-    @media screen and (max-width: 768px) {
-        padding: 72px 0;
+    text-align: left;
+    margin-bottom: 50px;
+    //min-width: 768px;
+}
+
+.main-layout {
+    width: calc(100% - #{$dashboard-width});
+    margin-left: $dashboard-width;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
     }
-    @media (width:768px) {
-        margin-left: 2rem;
-        justify-content: center;
-    }
-}
-
-.opacity {
-    opacity: $opacity;
-}
-
-.shadow-lg {
-    //box-shadow: 0px 0.5rem 10rem rgb(166, 42, 42), 0px -0.5rem 4rem rgb(166, 42, 42) !important;
-    //box-shadow: 0px -100.5rem 100rem #a62a2a, 0px -0.5rem 4rem #a62a2a !important;
-    box-shadow: 0 1rem 12rem rgba(0, 0, 0, .08) !important;
-}
-
-.visible-xs {
-    display: none;
-    @media screen and (max-width: 768px) {
-        display: block;
-    }
-}
-
-.row {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.col-xs-6 {
-    width: 50% !important;
-}
-
-@media screen and (max-width: 480px) {
-    .col-xs-6 {
-        width: 50% !important;
-    }
-}
-
-.hidden {
-    opacity: 0.0;
-}
-
-
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-@media screen and (max-width: 767px) {
-    html,
-    body {
-        min-width: 270px;
-    }
-    // same as hidden on sm , with this code we can hidden any block we want 
-    .must-hidden {
-        display: none !important;
-        height: 0px !important;
-        width: 0px !important;
-    }
-    .container {
-        max-width: none;
+    .row {
+        margin: 0;
+        padding: 0;
     }
 }

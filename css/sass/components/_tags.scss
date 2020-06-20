@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+    list-style: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.progress-up {
+    background: linear-gradient(-135deg, #1de9b6, #1dc4e9) !important;
+}
+
+.progress-down {
+    background: linear-gradient(-135deg, #899fd4, #a389d4) !important;
+}
+
+.fa-long-arrow-alt-up {
+    color: #1de9b6 !important;
+}
+
+.fa-long-arrow-alt-down {
+    color: #f44236;
+}
+
+.myfa {
+    margin-right: .5rem;
+}

@@ -1,0 +1,9 @@
+.product-management {
+    transition: all 2s;
+    .product-btns {
+        padding: 1.5rem;
+        .my-btn:nth-child(2) {
+            margin-left: 1rem;
+        }
+    }
+}

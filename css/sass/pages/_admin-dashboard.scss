@@ -1,0 +1,96 @@
+.main-layout {
+    .container {
+        padding: 0 1rem !important;
+        max-width: 100% !important;
+        .nt-chart {
+            position: relative;
+        }
+    }
+    .first-chart {
+        //margin: 1rem 2.5rem !important;
+        margin: 1rem 0 !important;
+        padding: 1rem !important;
+        position: relative;
+        background-color: #fff;
+        max-width: calc(100% - 5rem);
+        .buttons {
+            min-width: 310px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 0;
+        }
+        .buttons button {
+            cursor: pointer;
+            border: 1px solid silver;
+            border-right-width: 0;
+            background-color: #f8f8f8;
+            font-size: 1rem;
+            padding: 0.5rem;
+            outline: none;
+            transition-duration: 0.3s;
+        }
+        .buttons button:first-child {
+            border-top-left-radius: 0.3em;
+            border-bottom-left-radius: 0.3em;
+        }
+        .buttons button:last-child {
+            border-top-right-radius: 0.3em;
+            border-bottom-right-radius: 0.3em;
+            border-right-width: 1px;
+        }
+        .buttons button:hover {
+            color: white;
+            background-color: #333f54;
+            outline: none;
+        }
+        .buttons button.active {
+            background: linear-gradient(-135deg, #1de9b6, #1dc4e9) !important;
+            color: white;
+        }
+        .highcharts-credits {
+            display: none;
+        }
+    }
+}
+
+.highcharts-figure {
+    #user-chart-container {
+        height: 500px;
+    }
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 320px;
+        max-width: 700px;
+        margin: 1em auto;
+    }
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+}

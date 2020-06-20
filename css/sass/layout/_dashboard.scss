@@ -1,107 +1,110 @@
-$dashboard-width:280px;
 .dashboard {
-    display: none;
-    overflow-y: visible;
-    overflow-x: hidden;
-    width: 280px;
-    height: 100%;
-    top: 66px;
-    position: sticky;
-    background-color: $dark-color;
-    transition: $transation;
-    z-index: 100;
-    border: 0 !important;
-    min-width: 240px !important;
-    @media screen and (max-width: 767px) {
-        position: fixed;
+    display: block;
+    z-index: 1029;
+    position: fixed;
+    transition: all .3s ease-in-out;
+    box-shadow: 1px 0 20px 0 #3f4d67;
+    width: $dashboard-width;
+    height: 100vh;
+    top: 0;
+    background: #3f4d67;
+    color: #a9b7d0;
+    @media only screen and (max-width: 768px) {
+        display: none;
     }
-    ul {
-        list-style: none;
-        padding: 0;
+    .btn {
+        border-radius: 0;
+        border: none;
+        &:hover,
+        &:active,
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
     }
-    .dashboard-list {
-        padding: 30px;
-        @media screen and (max-width: 767px) {
-            margin-bottom: 25px;
-            padding: 30px 45px;
-        }
-        hr {
-            border-color: $danger-color;
-        }
-        .dashboard-card {
-            margin-top: 15px;
-            @media screen and (max-width: 768px) {
-                margin-top: 30px;
-            }
-            .dashboard-card-title {
-                text-transform: uppercase;
-                font-size: 14px;
-                margin: 0.75rem 0;
-                font-weight: bold;
-                color: $white-color;
-                white-space: nowrap;
-                position: relative;
-                //border-bottom: 1px solid white;
-                opacity: $opacity;
-            }
-            .dashboard-card-btn {
-                margin-top: 15px;
-                .list-btn {
-                    color: $white-color;
-                    background-color: $muted-color;
-                    display: block;
-                    border: none;
-                    text-align: left;
-                    height: 40px;
-                    padding: 0px 15px;
-                    overflow: hidden;
-                    cursor: pointer;
-                    width: 100%;
-                    opacity: $opacity;
-                    .dashboard-category {
-                        padding-left: 8px;
-                        margin-top: 10px;
-                        height: 40px !important;
-                        font-size: 15px;
-                        font-weight: bold;
-                        white-space: nowrap;
-                    }
-                    &:hover {
-                        background: none !important;
-                        background-color: $dark-color;
-                        box-shadow: 0 1px 5px, 0 -1px 5px white;
-                        font-size: initial !important;
-                        transition: all 0.5s;
-                        border-radius: 45px;
-                    }
+    .navbar-wrapper {
+        width: 100%;
+        height: 100%;
+        .header-logo {
+            position: relative;
+            align-items: center;
+            display: inline-flex;
+            float: left;
+            height: 70px;
+            text-align: center;
+            width: 100%;
+            margin-right: 0;
+            padding: .75rem 1.5rem;
+            transition: all .3s ease-in-out;
+            justify-content: center;
+            .my-brand {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-weight: 100;
+                    color: #fff;
+                    font-size: 18px;
                 }
-                .dashboard-card-list {
-                    padding: 0 10px;
-                    border-left: 1px solid #707173;
-                    li {
-                        .sublist-btn {
-                            margin: 13px 10px 0 10px;
-                            width: 93%;
+            }
+        }
+        .dashboard-content {
+            color: #a9b7d0;
+            width: 100%;
+            clear: both;
+            .dashboard-list {
+                width: 100%;
+                .dashboard-menu {
+                    .dashboard-menu-title {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        border-bottom: 3px solid;
+                        color: #1dc4e9;
+                        margin: .75rem;
+                        padding: .25rem 0;
+                    }
+                    .dashboard-submenu {
+                        margin: 0rem 0rem;
+                        .dashboard-submenu-header {
+                            width: 100%;
+                            text-align: left;
+                            color: #a9b7d0 !important;
+                            padding-left: 1.25rem;
+                            .dashboard-submenu-title {}
+                            &:hover {
+                                opacity: .7;
+                                background-color: #333f54;
+                                color: #fff !important;
+                                font-size: 15px;
+                            }
+                        }
+                        .dashboard-submenu-header.active {
+                            background: linear-gradient(-135deg, #1de9b6, #1dc4e9) !important;
+                            color: #fff !important;
+                            font-size: 15px;
+                        }
+                        .dashboard-submenu-ul {
+                            padding: 0;
+                            background-color: #333f54;
+                            .dashboard-item {
+                                border-left: 2px solid #1dc4e9;
+                                &:hover {
+                                    //background: #333f54;
+                                    color: #fff;
+                                }
+                                .dashboard-submenu-btn {
+                                    color: #a9b7d0;
+                                    padding: .5rem 3rem;
+                                    &:hover,
+                                    &.active {
+                                        color: #3ebfea !important;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-            }
-        }
-    }
-    .toggle-btn {
-        position: relative;
-        cursor: pointer;
-        list-style: none;
-        .dashboard-toggle-btn {
-            position: fixed !important;
-            top: 80px !important;
-            left: 5px !important;
-            list-style: none;
-            span {
-                margin-top: 7px !important;
-                box-shadow: 0 1px 5px #a62a2a, 0 -1px 5px #a62a2a;
-                border: 1px solid #a62a2a;
-                background-color: $dark-color;
             }
         }
     }
