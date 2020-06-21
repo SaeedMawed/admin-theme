@@ -8045,7 +8045,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto; }
+  margin: auto;
+  padding: 0 1rem;
+  min-width: 390px; }
   .myForm-container form {
     border: none !important; }
   @media screen and (max-width: 767px) {
