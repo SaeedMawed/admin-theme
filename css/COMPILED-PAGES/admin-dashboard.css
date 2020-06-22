@@ -7888,6 +7888,30 @@ ul {
 .myfa {
   margin-right: .5rem; }
 
+h1 {
+  font-size: 2.25rem; }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.75rem !important; } }
+
+h2 {
+  font-size: 2rem; }
+  @media only screen and (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem !important; } }
+
+h3 {
+  font-size: 1.75rem; }
+  @media only screen and (max-width: 768px) {
+    h3 {
+      font-size: 1.35rem !important; } }
+
+h4 {
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 768px) {
+    h4 {
+      font-size: 1.25rem !important; } }
+
 .logo {
   position: relative;
   margin: 0rem; }
@@ -8050,11 +8074,12 @@ ul {
   min-width: 390px; }
   .myForm-container form {
     border: none !important; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .myForm-container {
       width: 100% !important;
       margin-left: 0;
-      padding-top: 0px; } }
+      padding-top: 0px;
+      font-size: 14px !important; } }
   .myForm-container .container {
     /* Set a style for all buttons */
     /* Extra styles for the cancel button */
