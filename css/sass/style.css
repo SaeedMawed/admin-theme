@@ -284,7 +284,9 @@ h4 {
                 color: #fff; }
               .dashboard .navbar-wrapper .dashboard-content .dashboard-list .dashboard-menu .dashboard-submenu .dashboard-submenu-ul .dashboard-item .dashboard-submenu-btn {
                 color: #a9b7d0;
-                padding: .5rem 3rem; }
+                padding: .5rem 3rem;
+                width: 100%;
+                text-align: left; }
                 .dashboard .navbar-wrapper .dashboard-content .dashboard-list .dashboard-menu .dashboard-submenu .dashboard-submenu-ul .dashboard-item .dashboard-submenu-btn:hover, .dashboard .navbar-wrapper .dashboard-content .dashboard-list .dashboard-menu .dashboard-submenu .dashboard-submenu-ul .dashboard-item .dashboard-submenu-btn.active {
                   color: #3ebfea !important; }
 
@@ -395,8 +397,7 @@ body {
 .main-layout {
   width: calc(100% - 265px);
   margin-left: 265px;
-  padding-bottom: 3rem;
-  padding-top: 2rem; }
+  padding: 2rem 1rem 3rem 1rem; }
   @media only screen and (max-width: 768px) {
     .main-layout {
       width: 100%;

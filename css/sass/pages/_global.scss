@@ -18,8 +18,7 @@ body {
 .main-layout {
     width: calc(100% - #{$dashboard-width});
     margin-left: $dashboard-width;
-    padding-bottom: 3rem;
-    padding-top: 2rem;
+    padding:2rem 1rem 3rem 1rem;
     @media only screen and (max-width: 768px) {
         width: 100%;
         margin-left: 0;
