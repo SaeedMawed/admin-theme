@@ -7964,8 +7964,42 @@ h4 {
 .ch-prpgress {
   padding: .5rem; }
 
-.first-chart {
-  padding: 2.5rem !important; }
+.full-width-chart {
+  margin: 1rem  1.5rem !important;
+  padding: 1rem !important;
+  position: relative;
+  background-color: #fff;
+  max-width: calc(100% - 3rem) !important; }
+  .full-width-chart .buttons {
+    min-width: 310px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0; }
+  .full-width-chart .buttons button {
+    cursor: pointer;
+    border: 1px solid silver;
+    border-right-width: 0;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    padding: 0.5rem;
+    outline: none;
+    transition-duration: 0.3s; }
+  .full-width-chart .buttons button:first-child {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em; }
+  .full-width-chart .buttons button:last-child {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-right-width: 1px; }
+  .full-width-chart .buttons button:hover {
+    color: white;
+    background-color: #333f54;
+    outline: none; }
+  .full-width-chart .buttons button.active {
+    background: linear-gradient(-135deg, #1de9b6, #1dc4e9) !important;
+    color: white; }
+  .full-width-chart .highcharts-credits {
+    display: none; }
 
 .highcharts-credits {
   display: none !important; }
@@ -8252,7 +8286,7 @@ table.dataTable thead .sorting_desc_disabled:before {
           width: 300px;
           font-size: 14px;
           font-weight: 400;
-          border: 2px solid #3f4d67;
+          border: 2px solid #eee;
           height: 40px; }
     .main-table .dataTables_wrapper .my-table .table-header {
       background-color: #3f4d67;
